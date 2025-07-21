@@ -1,66 +1,63 @@
-.header-hero{
-    background-color: var(--header-hero-background-color);
-    display: flex;
-    justify-content:center;
-    align-items: center;
+.header-hero {
+  background-color: var(--header-hero-background-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.header-hero__block{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    width: 85%;
-    padding-top: 10em;
-    padding-bottom: 10em;
+.header-hero__block {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  width: 85%;
+  padding-top: 10em;
+  padding-bottom: 10em;
 }
 
-.header-hero__image{
-    border-radius: 1em;
+.header-hero__image {
+  border-radius: 1em;
 }
 
-.header-hero__text-block{
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    width: 550px;
-}
-  
-
-.header-hero__title{
-    font-size: 4em;
-    
+.header-hero__text-block {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 550px;
 }
 
-.header-hero__text{
-    font-size: 1.5em;
-    color: var(--color-neutral-400);
+.header-hero__title {
+  font-size: 4em;
 }
 
-.header-hero__links{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    width: 430px;
+.header-hero__text {
+  font-size: 1.5em;
+  color: var(--color-neutral-400);
 }
 
-.header-hero__menu-link {
+.header-hero__links {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 430px;
+}
+
+.header-hero__menu-wrapper {
   display: inline-block;
   width: 6em;
   text-align: center;
   padding: 0.75em 1em;
   background-color: var(--header-background-color);
   border-radius: 1em;
-  text-decoration: none;
-  color: whitesmoke;
   font-size: 2em;
   font-weight: 600;
-  transition: outline 0.3s ease, outline-offset 0.3s ease;
+  transition: outline 1s ease, outline-offset 1s ease;
 }
 
-.header-hero__menu-link:hover,
-.header-hero__menu-link:focus{
-    outline: 2px solid whitesmoke;
+.header-hero__menu-link {
+  text-decoration: none;
+  color: whitesmoke;
 }
+
 
 .header-hero__offers-link {
   display: inline-block;
@@ -74,5 +71,5 @@
   outline: 2px solid var(--header-background-color);
   font-size: 2em;
   font-weight: 600;
-  transition: background-color 0.3s ease;
 }
+
