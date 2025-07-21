@@ -7,11 +7,15 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    scroll-behavior: smooth;
 }
 
 :root {
-
-    scroll-behavior: smooth;
 
     .container {
         max-width: 1200px;
@@ -23,6 +27,6 @@
         max-width: 100%;
     }
 
-    font-family: 'Inter', sans-serif ;
     --header-background-color: #151515;
+    --header-hero-background-color: #f3f3f3;
 }

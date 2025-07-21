@@ -1,0 +1,21 @@
+.header-hero__block{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: var(--header-hero-background-color);
+    width: 100%;
+    padding: 5em;
+}
+
+.header-hero__image{
+    border-radius: 1em;
+    margin-right: 10em;
+}
+
+.header-hero__image-block{
+}
+
+.header-hero__text-block{
+    
+    width: 40%;
+}

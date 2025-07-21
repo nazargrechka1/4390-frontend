@@ -1,11 +1,26 @@
-a{
-    font-size: 1.5em;
-    color: white;
+.header-nav{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.header-logo{
+    width: 7em;
+    padding: 1em;
+    margin-left: 2em;
+}
+
+.header{
+    background-color: var(--header-background-color);   
+}
+
+.header-nav__link{
+    font-size: 2em;
+    color: whitesmoke;
     text-decoration: none;
     padding: 1em;
 }
 
-.header{
-    background-color: var(--header-background-color);
-    padding: 2em;
+.header-links__container{
+    margin-left: 2em;
 }
