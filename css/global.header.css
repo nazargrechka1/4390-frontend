@@ -11,7 +11,6 @@
 }
 
 .header__logo-container {
-
   display: flex;
   justify-content: left;
 }
@@ -23,12 +22,127 @@
 }
 
 .header-nav__link {
+  color: whitesmoke !important;
   font-size: 2em;
-  color: whitesmoke;
-  text-decoration: none;
-  padding: 1em;
+  padding: 0.5em 1em;
+  text-decoration: none !important;
 }
 
 .header-links__container {
   margin-left: 2em;
+}
+
+.header-links__list {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1em;
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+}
+
+.navbar-container{
+  display: none;
+}
+
+.nav-check {
+  display: none;
+}
+
+.nav-btn {
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 30px;
+  height: 24px;
+  cursor: pointer;
+  z-index: 1001;
+}
+
+.nav-btn span {
+  display: none;
+  height: 3px;
+  background-color: whitesmoke;
+  border-radius: 2px;
+  transition: 0.3s;
+}
+
+.navbar-container input {
+  display: none;
+}
+
+.navbar-container {
+  display: none;
+}
+
+/* === Сховати меню за замовчуванням на мобільних === */
+@media (max-width: 768px) {
+
+  .header-nav{
+    justify-content: space-between;
+  }
+
+  .header-links__container {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background-color: var(--header-background-color);
+    flex-direction: column;
+    align-items: center;
+    padding: 1em 0;
+    z-index: 1000;
+  }
+
+  .header-links__list {
+    flex-direction: column;
+    gap: 1em;
+  }
+
+  .header-nav__link {
+    font-size: 1.5em;
+  }
+
+  .navbar-container {
+    display: block;
+    z-index: 1001;
+    height: 30px;
+  }
+
+  .hamburger-lines {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 22px;
+    cursor: pointer;
+  }
+
+  .hamburger-lines .line {
+    display: block;
+    height: 3px;
+    background-color: whitesmoke;
+    border-radius: 2px;
+    transition: 0.3s;
+  }
+
+  /* === Анімація при відкритті меню === */
+  .navbar-container input:checked ~ .hamburger-lines .line1 {
+    transform: rotate(45deg) translateY(8px);
+  }
+
+  .navbar-container input:checked ~ .hamburger-lines .line2 {
+    opacity: 0;
+  }
+
+  .navbar-container input:checked ~ .hamburger-lines .line3 {
+    transform: rotate(-45deg) translateY(-8px);
+  }
+
+  /* === Показати меню, якщо чекбокс активний === */
+  .navbar-container input:checked ~ .header-links__container {
+    display: flex;
+  }
 }
