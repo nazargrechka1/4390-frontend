@@ -1,0 +1,73 @@
+.cafe-list {
+  padding: 2rem 1rem;
+  background-color: #fafafa;
+}
+
+.cafe-list__items {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.cafe-list__item {
+  background-color: #fff;
+  border-radius: 0.5rem;
+  padding: 1.5rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.cafe-list__city {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+  color: #333;
+}
+
+.cafe-list__address {
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
+  color: #555;
+}
+
+.cafe-list__map-link {
+  color: #b22222;
+  text-decoration: underline;
+  font-weight: 500;
+}
+
+.cafe-list__hours {
+  font-size: 0.95rem;
+  margin-bottom: 0.75rem;
+  color: #444;
+}
+
+.cafe-list__reviews {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.cafe-list__review {
+  font-size: 0.9rem;
+  color: #666;
+}
+
+//Адаптивність
+@media (min-width: 600px) {
+  .cafe-list__items {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .cafe-list__item {
+    flex: 1 1 calc(50% - 2rem);
+  }
+}
+
+@media (min-width: 900px) {
+  .cafe-list__item {
+    flex: 1 1 calc(33.333% - 2rem);
+  }
+}
