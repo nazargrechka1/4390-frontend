@@ -1,47 +1,45 @@
-<section class="cafe-map-section" style="max-width:1200px;margin:40px auto 0;display:flex;flex-direction:column;align-items:center;">
-  <h2 class="cafe-map-title" style="font-size:2rem;font-weight:600;text-align:center;margin-bottom:0.5em;">Interactive Cafe Map</h2>
-  <p class="cafe-map-desc" style="margin-bottom:2em;text-align:center;color:#555;">
+<section class="cafe-map-section">
+  <h2 class="cafe-map-title">Interactive Cafe Map</h2>
+  <p class="cafe-map-desc">
     Click on any marker to see cafe details and reviews
   </p>
-  <div class="cafe-map-container" style="display:flex;gap:2em;width:100%;justify-content:center;flex-wrap:wrap;">
-    <!-- MAP (legend/точки видалені) -->
-    <div style="background:#ececf1;border-radius:12px;padding:2em 2em 2em 1.5em;position:relative;flex:1;min-width:420px;max-width:640px;display:flex;flex-direction:column;align-items:center;">
-      <div style="width:100%;height:340px;border-radius:8px;overflow:hidden;">
+
+  <div class="cafe-map-container">
+    <!-- Map -->
+    <div class="cafe-map-box">
+      <div class="cafe-map-embed">
         <iframe 
           src="https://www.google.com/maps/d/embed?mid=13MGctolrhQl5Gtt7zxDmXvQppDj1OBU&ehbc=2E312F"
-          width="100%"
-          height="100%"
-          style="border:0;"
           allowfullscreen=""
           loading="lazy"
         ></iframe>
       </div>
     </div>
 
-    <!-- Cafe List -->
-    <div class="cafe-list-panel" style="display:flex;flex-direction:column;gap:1em;flex:0.9;min-width:300px;max-width:350px;">
-      <div class="cafe-list-card" style="background:#fff;border-radius:12px;padding:1.1em 1.3em;box-shadow:0 2px 8px #0001;">
-        <div style="font-weight:600;">Яготин</div>
-        <div style="color:#888;">Кафе, Незалежності 106 / Вокзальна 16А</div>
-        <div style="color:#555;font-size:0.97em;">🕐 7:00–21:00</div>
-        <div style="font-size:1.1em;margin:0.15em 0 0.1em 0;">★ 5.0</div>
-        <div style="color:#999;font-size:0.95em;">Смакота</div>
+    <!-- Cards -->
+    <div class="cafe-list-panel">
+      <div class="cafe-list-card">
+        <div class="cafe-list-card__city">Яготин</div>
+        <div class="cafe-list-card__address">Кафе, Незалежності 106 / Вокзальна 16А</div>
+        <div class="cafe-list-card__hours">🕐 7:00–21:00</div>
+        <div class="cafe-list-card__rating">★ 5.0</div>
+        <div class="cafe-list-card__review">Смакота</div>
       </div>
 
-      <div class="cafe-list-card" style="background:#fff;border-radius:12px;padding:1.1em 1.3em;box-shadow:0 2px 8px #0001;">
-        <div style="font-weight:600;">Баришівка</div>
-        <div style="color:#888;">Кафе, Березанський шлях 2</div>
-        <div style="color:#555;font-size:0.97em;">🕐 7:00–21:00</div>
-        <div style="font-size:1.1em;margin:0.15em 0 0.1em 0;">★ 4.7</div>
-        <div style="color:#999;font-size:0.95em;">Спробувала каву тут вперше, дуже смачно.</div>
+      <div class="cafe-list-card">
+        <div class="cafe-list-card__city">Баришівка</div>
+        <div class="cafe-list-card__address">Кафе, Березанський шлях 2</div>
+        <div class="cafe-list-card__hours">🕐 7:00–21:00</div>
+        <div class="cafe-list-card__rating">★ 4.7</div>
+        <div class="cafe-list-card__review">Спробувала каву тут вперше, дуже смачно.</div>
       </div>
 
-      <div class="cafe-list-card" style="background:#fff;border-radius:12px;padding:1.1em 1.3em;box-shadow:0 2px 8px #0001;">
-        <div style="font-weight:600;">Переяслав</div>
-        <div style="color:#888;">Кафе, Богдана Хмельницького 32</div>
-        <div style="color:#555;font-size:0.97em;">🕐 7:00–21:00</div>
-        <div style="font-size:1.1em;margin:0.15em 0 0.1em 0;">★ 4.9</div>
-        <div style="color:#999;font-size:0.95em;">Кава яку хочуть навіть песики</div>
+      <div class="cafe-list-card">
+        <div class="cafe-list-card__city">Переяслав</div>
+        <div class="cafe-list-card__address">Кафе, Богдана Хмельницького 32</div>
+        <div class="cafe-list-card__hours">🕐 7:00–21:00</div>
+        <div class="cafe-list-card__rating">★ 4.9</div>
+        <div class="cafe-list-card__review">Кава яку хочуть навіть песики</div>
       </div>
     </div>
   </div>
