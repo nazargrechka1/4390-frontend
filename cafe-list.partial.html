@@ -1,60 +1,48 @@
-<section class="cafe-list">
-  <ul class="cafe-list__items">
-    <li class="cafe-list__item">
-      <h3 class="cafe-list__city">Яготин</h3>
-      <p class="cafe-list__address">
-        Незалежності 106 / Вокзальна 16А<br />
-        <a
-          href="https://www.google.com/maps?q=Яготин, Незалежності 106"
-          target="_blank"
-          class="cafe-list__map-link"
-        >
-          Відкрити на карті
-        </a>
-      </p>
-      <p class="cafe-list__hours">🕐 7:00–21:00</p>
-      <div class="cafe-list__reviews">
-        <p class="cafe-list__review">★ 5.0 — Смакота</p>
-        <p class="cafe-list__review">★ 4.8 — Макаронси які виготовляють ту сняться мені вночі. Тому кожен ранок я тут.</p>
+<section class="cafe-map-section" style="max-width:1200px;margin:40px auto 0;display:flex;flex-direction:column;align-items:center;">
+  <h2 class="cafe-map-title" style="font-size:2rem;font-weight:600;text-align:center;margin-bottom:0.5em;">Interactive Cafe Map</h2>
+  <p class="cafe-map-desc" style="margin-bottom:2em;text-align:center;color:#555;">
+    Click on any marker to see cafe details and reviews
+  </p>
+  <div class="cafe-map-container" style="display:flex;gap:2em;width:100%;justify-content:center;flex-wrap:wrap;">
+    <!-- MAP (legend/точки видалені) -->
+    <div style="background:#ececf1;border-radius:12px;padding:2em 2em 2em 1.5em;position:relative;flex:1;min-width:420px;max-width:640px;display:flex;flex-direction:column;align-items:center;">
+      <div style="width:100%;height:340px;border-radius:8px;overflow:hidden;">
+        <iframe 
+          src="https://www.google.com/maps/d/embed?mid=13MGctolrhQl5Gtt7zxDmXvQppDj1OBU&ehbc=2E312F"
+          width="100%"
+          height="100%"
+          style="border:0;"
+          allowfullscreen=""
+          loading="lazy"
+        ></iframe>
       </div>
-    </li>
+    </div>
 
-    <li class="cafe-list__item">
-      <h3 class="cafe-list__city">Баришівка</h3>
-      <p class="cafe-list__address">
-        Березанський шлях 2<br />
-        <a
-          href="https://www.google.com/maps?q=Баришівка, Березанський шлях 2"
-          target="_blank"
-          class="cafe-list__map-link"
-        >
-          Відкрити на карті
-        </a>
-      </p>
-      <p class="cafe-list__hours">🕐 7:00–21:00</p>
-      <div class="cafe-list__reviews">
-        <p class="cafe-list__review">★ 4.7 — Спробувала каву тут вперше, дуже смачно. Молоко таке солодке (при тому, що я НЕ п'ю каву з цукром та сиропами)</p>
+    <!-- Cafe List -->
+    <div class="cafe-list-panel" style="display:flex;flex-direction:column;gap:1em;flex:0.9;min-width:300px;max-width:350px;">
+      <div class="cafe-list-card" style="background:#fff;border-radius:12px;padding:1.1em 1.3em;box-shadow:0 2px 8px #0001;">
+        <div style="font-weight:600;">Яготин</div>
+        <div style="color:#888;">Кафе, Незалежності 106 / Вокзальна 16А</div>
+        <div style="color:#555;font-size:0.97em;">🕐 7:00–21:00</div>
+        <div style="font-size:1.1em;margin:0.15em 0 0.1em 0;">★ 5.0</div>
+        <div style="color:#999;font-size:0.95em;">Смакота</div>
       </div>
-    </li>
 
-    <li class="cafe-list__item">
-      <h3 class="cafe-list__city">Переяслав</h3>
-      <p class="cafe-list__address">
-        Богдана Хмельницького 32<br />
-        <a
-          href="https://www.google.com/maps?q=Переяслав, Богдана Хмельницького 32"
-          target="_blank"
-          class="cafe-list__map-link"
-        >
-          Відкрити на карті
-        </a>
-      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2450.785617182287!2d31.458619699999996!3d50.070915899999996!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40d443053f2646b3%3A0x3b65591474cf1430!2zWm9uYSBDb2ZmZWUg0J_QtdGA0LXRj9GB0LvQsNCy!5e1!3m2!1suk!2sua!4v1753193004001!5m2!1suk!2sua" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-      </p>
-      <p class="cafe-list__hours">🕐 7:00–21:00</p>
-      <div class="cafe-list__reviews">
-        <p class="cafe-list__review">★ 4.9 — Кава яку хочуть навіть песики</p>
-        <p class="cafe-list__review">★ 4.6 — Тестувала матчу у багатьох закладах, але тут найсмачніша.</p>
+      <div class="cafe-list-card" style="background:#fff;border-radius:12px;padding:1.1em 1.3em;box-shadow:0 2px 8px #0001;">
+        <div style="font-weight:600;">Баришівка</div>
+        <div style="color:#888;">Кафе, Березанський шлях 2</div>
+        <div style="color:#555;font-size:0.97em;">🕐 7:00–21:00</div>
+        <div style="font-size:1.1em;margin:0.15em 0 0.1em 0;">★ 4.7</div>
+        <div style="color:#999;font-size:0.95em;">Спробувала каву тут вперше, дуже смачно.</div>
       </div>
-    </li>
-  </ul>
+
+      <div class="cafe-list-card" style="background:#fff;border-radius:12px;padding:1.1em 1.3em;box-shadow:0 2px 8px #0001;">
+        <div style="font-weight:600;">Переяслав</div>
+        <div style="color:#888;">Кафе, Богдана Хмельницького 32</div>
+        <div style="color:#555;font-size:0.97em;">🕐 7:00–21:00</div>
+        <div style="font-size:1.1em;margin:0.15em 0 0.1em 0;">★ 4.9</div>
+        <div style="color:#999;font-size:0.95em;">Кава яку хочуть навіть песики</div>
+      </div>
+    </div>
+  </div>
 </section>
