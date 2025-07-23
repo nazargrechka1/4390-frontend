@@ -1,73 +1,114 @@
-.cafe-list {
-  padding: 2rem 1rem;
-  background-color: #fafafa;
-}
-
-.cafe-list__items {
+.cafe-map-section {
+  max-width: 1200px;
+  margin: 40px auto 0;
   display: flex;
   flex-direction: column;
-  gap: 2rem;
-  list-style: none;
-  margin: 0;
-  padding: 0;
+  align-items: center;
+  padding: 0 1rem;
 }
 
-.cafe-list__item {
-  background-color: #fff;
-  border-radius: 0.5rem;
-  padding: 1.5rem;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+.cafe-map-title {
+  font-size: 2rem;
+  font-weight: 600;
+  text-align: center;
+  margin-bottom: 0.5em;
 }
 
-.cafe-list__city {
-  font-size: 1.5rem;
-  margin-bottom: 0.5rem;
-  color: #333;
-}
-
-.cafe-list__address {
-  font-size: 1rem;
-  margin-bottom: 0.5rem;
+.cafe-map-desc {
+  margin-bottom: 2em;
+  text-align: center;
   color: #555;
 }
 
-.cafe-list__map-link {
-  color: #b22222;
-  text-decoration: underline;
-  font-weight: 500;
+.cafe-map-container {
+  display: flex;
+  gap: 2em;
+  width: 100%;
+  justify-content: center;
+  flex-wrap: wrap;
 }
 
-.cafe-list__hours {
-  font-size: 0.95rem;
-  margin-bottom: 0.75rem;
-  color: #444;
-}
-
-.cafe-list__reviews {
+//КАРТА
+.cafe-map-box {
+  background: #ececf1;
+  border-radius: 12px;
+  padding: 2em 2em 2em 1.5em;
+  position: relative;
+  flex: 1;
+  min-width: 420px;
+  max-width: 640px;
   display: flex;
   flex-direction: column;
-  gap: 0.5rem;
+  align-items: center;
 }
 
-.cafe-list__review {
-  font-size: 0.9rem;
-  color: #666;
+.cafe-map-box iframe {
+  width: 100%;
+  height: 340px;
+  border: 0;
+  border-radius: 8px;
+  overflow: hidden;
 }
 
-//Адаптивність
-@media (min-width: 600px) {
-  .cafe-list__items {
-    flex-direction: row;
-    flex-wrap: wrap;
+//СПИСОК КАФЕ
+.cafe-list-panel {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  flex: 0.9;
+  min-width: 300px;
+  max-width: 350px;
+}
+
+.cafe-list-card {
+  background: #fff;
+  border-radius: 12px;
+  padding: 1.1em 1.3em;
+  box-shadow: 0 2px 8px #0001;
+}
+
+.cafe-list-card__city {
+  font-weight: 600;
+}
+
+.cafe-list-card__address {
+  color: #888;
+}
+
+.cafe-list-card__hours {
+  color: #555;
+  font-size: 0.97em;
+}
+
+.cafe-list-card__rating {
+  font-size: 1.1em;
+  margin: 0.15em 0 0.1em 0;
+}
+
+.cafe-list-card__review {
+  color: #999;
+  font-size: 0.95em;
+}
+
+//АДАПТИВНІСТЬ
+@media (max-width: 768px) {
+  .cafe-map-container {
+    flex-direction: column;
+    align-items: center;
   }
 
-  .cafe-list__item {
-    flex: 1 1 calc(50% - 2rem);
+  .cafe-map-box,
+  .cafe-list-panel {
+    max-width: 100%;
+    min-width: auto;
+    width: 100%;
   }
-}
 
-@media (min-width: 900px) {
-  .cafe-list__item {
-    flex: 1 1 calc(33.333% - 2rem);
+  .cafe-list-card {
+    padding: 1em 1em;
+  }
+
+  .cafe-map-box iframe {
+    height: 300px;
   }
 }
