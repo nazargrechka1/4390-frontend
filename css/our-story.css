@@ -30,16 +30,17 @@
 
 .our-story__text {
   flex: 1 1 55%;
+  text-align: justify;
 }
 
 .our-story__title {
-  font-size: 2rem;
+  font-size: 3em;
   font-weight: 700;
   margin-bottom: 1rem;
 }
 
 .our-story__paragraph {
-  font-size: 1rem;
+  font-size: 1.5em;
   line-height: 1.6;
   margin-bottom: 1rem;
 }
@@ -47,7 +48,7 @@
 .our-story__stats {
   display: flex;
   gap: 24px;
-  margin-top: 24px;
+  margin-top: 2em;
 }
 
 .our-story__stat {
@@ -66,7 +67,6 @@
   color: #666;
 }
 
-//Адаптивність
 @media (max-width: 768px) {
   .our-story__content {
     flex-direction: column;
@@ -76,6 +76,15 @@
   .our-story__image,
   .our-story__text {
     flex: 1 1 100%;
+    padding: 1em;
+  }
+
+  .our-story__title {
+    font-size: 2em;
+  }
+
+  .our-story__paragraph {
+    font-size: 1em;
   }
 
   .our-story__stats {

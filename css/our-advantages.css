@@ -1,76 +1,78 @@
 .advantages {
   font-family: "Poppins", sans-serif;
-  padding: 3rem 0;
+  padding: 6rem 0;
+}
 
-  .advantages__intro {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+.advantages__intro {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 
-    .advantages__subtitle {
-      font-size: 1.4rem;
-      font-weight: bold;
-      margin: 0.5rem 0;
-    }
+.advantages__subtitle {
+  font-size: 2.4rem;
+  font-weight: bold;
+  margin: 0.5rem 0;
+}
 
-    .advantages__description {
-      font-size: 0.8rem;
-      color: var(--description-color__advantages);
-    }
-  }
+.advantages__description {
+  font-size: 1.4rem;
+  color: var(--description-color__advantages);
+  text-align: center;
+  max-width: 500px;
+}
 
+.advantages__list {
+  margin-top: 2rem;
+  margin-bottom: 4rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  align-items: center;
+}
+
+@media (min-width: 833px) {
   .advantages__list {
-    margin-top: 2rem;
-    margin-bottom: 4rem;
-
-    @media (min-width: 833px) {
-      display: flex;
-      flex-direction: row;
-      justify-content: center;
-      align-items: center;
-      gap: 10rem;
-      margin-top: 2rem;
-      margin-bottom: 4rem;
-    }
-
-    .advantages__item {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-
-      .advantages__icon {
-        background: linear-gradient(
-          rgba(108, 108, 108, 0.2),
-          rgba(108, 108, 108, 0.2)
-        );
-        width: 40px;
-        height: 40px;
-        border-radius: 50%;
-        margin-top: 2rem;
-        margin-bottom: 0.5rem;
-
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        color: var(--action-color__advantages);
-      }
-
-      .advantages__content {
-        text-align: center;
-        max-width: 300px;
-
-        .advantages__title {
-          font-size: 1rem;
-          font-weight: bold;
-        }
-
-        .advantages__description {
-          font-size: 0.75rem;
-          color: var(--description-color__advantages);
-          margin: 0.25rem;
-        }
-      }
-    }
+    flex-direction: row;
+    justify-content: center;
+    gap: 10rem;
   }
+}
+
+.advantages__item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.advantages__icon {
+  background: linear-gradient(
+    rgba(108, 108, 108, 0.2),
+    rgba(108, 108, 108, 0.2)
+  );
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  margin-top: 2rem;
+  margin-bottom: 0.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--action-color__advantages);
+}
+
+.advantages__content {
+  text-align: center;
+  max-width: 300px;
+}
+
+.advantages__title {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.advantages__content .advantages__description {
+  font-size: 1.2rem;
+  color: var(--description-color__advantages);
+  margin: 0.25rem;
 }

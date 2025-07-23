@@ -28,7 +28,7 @@
   flex-wrap: wrap;
 }
 
-//КАРТА
+
 .cafe-map-box {
   background: #ececf1;
   border-radius: 12px;
@@ -50,7 +50,7 @@
   overflow: hidden;
 }
 
-//СПИСОК КАФЕ
+
 .cafe-list-panel {
   display: flex;
   flex-direction: column;
@@ -90,7 +90,28 @@
   font-size: 0.95em;
 }
 
-//АДАПТИВНІСТЬ
+@media (max-width: 768px) {
+  .cafe-map-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .cafe-map-box,
+  .cafe-list-panel {
+    max-width: 100%;
+    min-width: auto;
+    width: 100%;
+  }
+
+  .cafe-list-card {
+    padding: 1em 1em;
+  }
+
+  .cafe-map-box iframe {
+    height: 300px;
+  }
+}
+
 @media (max-width: 768px) {
   .cafe-map-container {
     flex-direction: column;
