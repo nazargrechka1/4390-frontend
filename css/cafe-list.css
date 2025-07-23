@@ -26,11 +26,10 @@
   width: 100%;
   justify-content: center;
   flex-wrap: wrap;
-  align-items: flex-start;
+  align-items: stretch;
 }
 
-
-/* Map */
+/Карта/
 .cafe-map-box {
   background: #ececf1;
   border-radius: 12px;
@@ -40,12 +39,14 @@
   max-width: 640px;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  justify-content: stretch;
+  height: 100%;
 }
 
 .cafe-map-embed {
-  width: 100%;
-  height: 340px;
+  flex-grow: 1;
+  height: 100%;
+  min-height: 340px;
   border-radius: 8px;
   overflow: hidden;
 }
@@ -56,7 +57,7 @@
   border: 0;
 }
 
-/* Cards */
+/Список карток/
 .cafe-list-panel {
   display: flex;
   flex-direction: column;
@@ -64,6 +65,7 @@
   flex: 0.9;
   min-width: 300px;
   max-width: 350px;
+  justify-content: flex-start;
 }
 
 .cafe-list-card {
@@ -100,7 +102,7 @@
   font-size: 0.95em;
 }
 
-/* Адаптивність */
+/Адаптивність/
 @media (max-width: 768px) {
   .cafe-map-container {
     flex-direction: column;
@@ -114,6 +116,6 @@
   }
 
   .cafe-map-embed {
-    height: 300px;
+    min-height: 300px;
   }
 }
