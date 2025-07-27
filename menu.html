@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <title>Меню</title>
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    /* Меню */
+    .menu-page { max-width: 1100px; margin: 32px auto; padding: 24px; background: #fff; border-radius: 12px; box-shadow: 0 2px 8px rgba(0,0,0,0.05); }
+    .menu-page h1 { margin-bottom: 24px; }
+    .menu-cards { display: flex; flex-wrap: wrap; gap: 32px; justify-content: flex-start; }
+    .menu-card {
+      background: #f6f8fa;
+      border-radius: 10px;
+      box-shadow: 0 1px 4px rgba(0,0,0,0.07);
+      width: 220px;
+      padding: 16px;
+      text-align: center;
+      transition: box-shadow .2s;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-decoration: none;
+      color: inherit;
+      cursor: pointer;
+      border: none;
+      outline: none;
+    }
+    .menu-card:hover {
+      box-shadow: 0 4px 16px rgba(0,112,243,0.12);
+    }
+    .menu-card img {
+      width: 180px;
+      height: 180px;
+      border-radius: 8px;
+      margin-bottom: 12px;
+      background: #e3e6ea;
+    }
+
+    /* Детальна сторінка */
+    .dish-detail {
+      display: flex;
+      gap: 48px;
+      max-width: 1000px;
+      margin: 48px auto;
+      background: #fff;
+      border-radius: 16px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+      padding: 40px 32px;
+      align-items: flex-start;
+      animation: fadeIn .3s;
+    }
+    @keyframes fadeIn { from {opacity: 0;} to {opacity: 1;} }
+    .dish-images {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      align-items: center;
+    }
+    .dish-images img {
+      width: 350px;
+      height: 350px;
+      object-fit: cover;
+      border-radius: 12px;
+      background: #f6f8fa;
+    }
+    .dish-thumb {
+      width: 70px;
+      height: 70px;
+      object-fit: cover;
+      border: 1px solid #ccc;
+      border-radius: 7px;
+      cursor: pointer;
+      margin-top: 8px;
+    }
+    .dish-info {
+      flex: 1.2;
+      display: flex;
+      flex-direction: column;
+    }
+    .dish-availability {
+      color: #37a863;
+      font-weight: 600;
+      margin-bottom: 10px;
+    }
+    .dish-title {
+      font-size: 2rem;
+      font-weight: bold;
+      margin-bottom: 8px;
+    }
+    .dish-code {
+      color: #888;
+      font-size: 16px;
+      margin-bottom: 14px;
+    }
+    .dish-price {
+      font-size: 1.6rem;
+      font-weight: bold;
+      margin-bottom: 18px;
+    }
+    .dish-order {
+      display: flex;
+      gap: 12px;
+      margin-bottom: 32px;
+    }
+    .dish-order input[type="number"] {
+      width: 44px;
+      padding: 5px;
+      font-size: 1.1rem;
+    }
+    .dish-order button {
+      background: #ffe5d0;
+      color: #f08045;
+      border: none;
+      border-radius: 5px;
+      padding: 8px 25px;
+      font-size: 1.1rem;
+      font-weight: bold;
+      cursor: pointer;
+      transition: background .2s;
+    }
+    .dish-order button:hover {
+      background: #ffd0a6;
+    }
+    .dish-description-title {
+      margin-bottom: 6px;
+      font-weight: bold;
+      letter-spacing: 1px;
+      color: #555;
+      border-bottom: 2px solid #f08045;
+      display: inline-block;
+      padding-bottom: 2px;
+    }
+    .dish-description {
+      color: #444;
+      font-size: 17px;
+      line-height: 1.55;
+    }
+    .back-to-menu {
+      margin: 32px;
+      display: inline-block;
+      font-size: 18px;
+      color: #f08045;
+      background: none;
+      border: none;
+      cursor: pointer;
+      font-weight: bold;
+      text-decoration: underline;
+    }
+    @media (max-width: 900px) {
+      .dish-detail { flex-direction: column; padding: 24px 8px; gap:24px;}
+      .dish-images img { width: 100%; height: auto; }
+    }
+  </style>
+</head>
+<body>
+  <!-- Тут може бути ваша шапка -->
+
+  <!-- Блок меню -->
+  <main id="menu" class="menu-page">
+    <h1>Меню</h1>
+    <div class="menu-cards">
+      <button class="menu-card" onclick="showDish('1')">
+        <img src="https://uploads.onecompiler.io/43rxe5kuj/43rwvugpt/%D0%BC%D0%BE%D1%80%D1%81.jpg" alt="Страва 1">
+        <h2>Морс</h2>
+        <p>Свіжий ягідний морс, який освіжає в спекотний день!</p>
+        <span class="price">120 грн</span>
+      </button>
+      <button class="menu-card" onclick="showDish('2')">
+        <img src="https://via.placeholder.com/180x180?text=Страва+2" alt="Страва 2">
+        <h2>Страва 2</h2>
+        <p>Опис страви 2</p>
+        <span class="price">150 грн</span>
+      </button>
+      <!-- Додавайте інші страви -->
+    </div>
+  </main>
+
+  <!-- Блок детальної сторінки (одна страва) -->
+  <div id="dish-detail-1" style="display:none;">
+    <button class="back-to-menu" onclick="showMenu()">&larr; Назад до меню</button>
+    <div class="dish-detail">
+      <div class="dish-images">
+        <img src="https://uploads.onecompiler.io/43rxe5kuj/43rwvugpt/%D0%BC%D0%BE%D1%80%D1%81.jpg" alt="Страва 1">
+      </div>
+      <div class="dish-info">
+        <div class="dish-availability">..</div>
+        <div class="dish-title">Морс</div>
+        <div class="dish-code">Код продукту: 001</div>
+        <div class="dish-price">120 грн</div>
+        <div class="dish-order">
+          <input type="number" min="1" value="1">
+          <button>Додати у кошик</button>
+        </div>
+        <div class="dish-description-title">Опис</div>
+        <div class="dish-description">
+          Свіжий ягідний морс, який освіжає в спекотний день! <br>
+          Зробіть свій день яскравішим разом з нами!💗🤩
+        </div>
+      </div>
+    </div>
+  </div>
+
+<div id="dish-detail-2" style="display:none;">
+    <button class="back-to-menu" onclick="showMenu()">&larr; Назад до меню</button>
+    <div class="dish-detail">
+      <div class="dish-images">
+        <img src=".jpg" alt="Страва 2">
+      </div>
+      <div class="dish-info">
+        <div class="dish-availability">..</div>
+        <div class="dish-title">Морс</div>
+        <div class="dish-code">Код продукту: 002</div>
+        <div class="dish-price">120 грн</div>
+        <div class="dish-order">
+          <input type="number" min="1" value="1">
+          <button>Додати у кошик</button>
+        </div>
+        <div class="dish-description-title">Опис</div>
+        <div class="dish-description">
+          ..., який освіжає в спекотний день! <br>
+          Зробіть свій день яскравішим разом з нами!💗🤩
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <!-- Якщо треба додати інші детальні сторінки: додайте аналогічний блок з id="dish-detail-2" і т.д. -->
+
+  <script>
+    function showDish(num) {
+      document.getElementById('menu').style.display = 'none';
+      document.getElementById('dish-detail-' + num).style.display = 'block';
+      window.scrollTo(0, 0);
+    }
+    function showMenu() {
+      document.getElementById('menu').style.display = 'block';
+      // Приховати всі dish-detail
+      let details = document.querySelectorAll('[id^="dish-detail-"]');
+      details.forEach(el => el.style.display = 'none');
+      window.scrollTo(0, 0);
+    }
+  </script>
+</body>
+</html>
