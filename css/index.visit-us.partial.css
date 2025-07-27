@@ -1,1 +1,89 @@
+.top-section {
+  background-color: #ffffff;
+  padding: 4em 0 4em;
+  text-align: center;
+  margin: -40px auto 0;
+  position: relative;
+  z-index: 2;
+  flex: 1;
+}
 
+.top-section__container {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.top-section__title {
+  color: #333333;
+  font-size: 2.4rem;
+  margin-bottom: 15px;
+  font-weight: 600;
+}
+
+.top-section__subtitle {
+  color: #666666;
+  font-size: 1.2rem;
+  margin-bottom: 50px;
+  line-height: 1.6;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.top-section__social {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin: 40px 0 20px;
+}
+
+.top-section__social-link {
+  color: #333;
+  font-size: 1.3rem;
+  transition: all 0.3s ease;
+}
+
+.top-section__social-link:hover {
+  color: #c0a878;
+  transform: translateY(-3px);
+}
+
+/* Info columns */
+.info-columns {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 50px;
+  margin-top: 20px;
+}
+
+.info-column {
+  flex: 1;
+  min-width: 250px;
+  text-align: center;
+  padding: 0 15px;
+}
+
+.info-column__title {
+  color: #000000; /* Чорний колір */
+  font-size: 1.4rem;
+  margin-bottom: 25px;
+  padding-bottom: 10px;
+  border-bottom: 2px solid #dddddd;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.info-column__title i {
+  color: #000000; /* Чорні іконки */
+  font-size: 1.2em;
+}
+
+.info-column__text {
+  color: #555555;
+  line-height: 1.8;
+  margin: 0;
+  font-size: 1.05rem;
+}
