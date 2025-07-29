@@ -5,6 +5,59 @@
   justify-content: center;
 }
 
+.header__burger {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 3em;
+  height: 3em;
+  background: none;
+  border: none;
+  cursor: pointer;
+  position: relative;
+  z-index: 1001;
+  margin-right: 1em;
+}
+
+.header__burger-line {
+  position: absolute;
+  width: 3em;
+  height: 0.3em;
+  background: whitesmoke;
+  border-radius: 2px;
+  transition: all 0.3s ease-in-out;
+  left: 0;
+}
+
+/* Розташування ліній бургер-меню */
+.header__burger-line.first {
+  top: 0.5em;
+}
+
+.header__burger-line.second {
+  top: 1.5em;
+}
+
+.header__burger-line.third {
+  top: 2.5em;
+}
+
+/* Анімація при відкритому меню */
+.header__burger.open .header__burger-line.first {
+  transform: rotate(45deg);
+  top: 1.5em;
+}
+
+.header__burger.open .header__burger-line.second {
+  opacity: 0;
+}
+
+.header__burger.open .header__burger-line.third {
+  transform: rotate(-45deg);
+  top: 1.5em;
+}
+
 .header__logo {
   width: 7em;
   padding: 1em;
@@ -28,121 +81,132 @@
   text-decoration: none !important;
 }
 
-.header-links__container {
-  margin-left: 2em;
-}
-
-.header-links__list {
+.header__links-block {
   display: flex;
-  align-items: center;
+  flex-direction: row;
   justify-content: center;
-  gap: 1em;
-  padding: 0;
-  margin: 0;
-  list-style-type: none;
+  margin-left: 2em;
+  
 }
 
-.navbar-container{
-  display: none;
-}
-
-.nav-check {
-  display: none;
-}
-
-.nav-btn {
-  display: none;
-  flex-direction: column;
+.header-links__list{
+  display: flex;
   justify-content: space-between;
-  width: 30px;
-  height: 24px;
-  cursor: pointer;
-  z-index: 1001;
+  list-style: none;
+  padding: 1em;
+  margin-bottom: 0;
 }
 
-.nav-btn span {
-  display: none;
-  height: 3px;
-  background-color: whitesmoke;
-  border-radius: 2px;
-  transition: 0.3s;
-}
-
-.navbar-container input {
-  display: none;
-}
-
-.navbar-container {
-  display: none;
-}
-
-/* === Сховати меню за замовчуванням на мобільних === */
 @media (max-width: 1024px) {
-
-  .header-nav{
-    justify-content: space-between;
+  .header__burger {
+    display: flex;
   }
 
-  .header-links__container {
-    display: none;
-    position: absolute;
-    top: 100%;
-    left: 0;
+  .navbar {
+    display: flex;
+    flex-direction: row;
+
     width: 100%;
-    background-color: var(--header-background-color);
+  }
+
+  .header__menu {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  .header-nav {
+    display: flex;
     flex-direction: column;
-    align-items: center;
-    padding: 1em 0;
-    z-index: 1000;
+    justify-content: flex-start;
+    margin: 0;
+  }
+
+  .header__links-block {
+    display: none;
+    opacity: 0;
+    transition: opacity 1s ease, transform 1s ease;
+  }
+
+  .header__links-block.open {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+    padding: 4em;
+    color: whitesmoke;
+    text-align: center;
+    height: 70vh;
+    opacity: 1;
+    transform: translateY(0);
   }
 
   .header-links__list {
-    flex-direction: column;
-    gap: 1em;
-  }
-
-  .header-nav__link {
-    font-size: 1.5em;
-  }
-
-  .navbar-container {
-    display: block;
-    z-index: 1001;
-    height: 30px;
-  }
-
-  .hamburger-lines {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    width: 30px;
-    height: 22px;
-    cursor: pointer;
+    list-style: none;
   }
 
-  .hamburger-lines .line {
-    display: block;
-    height: 3px;
-    background-color: whitesmoke;
-    border-radius: 2px;
-    transition: 0.3s;
+  .header-nav__link {
+    font-size: 2.5em;
+  }
+}
+
+@media (max-width: 500px) {
+  .header-nav__link {
+    font-size: 2em;
+    padding: 0;
   }
 
-  /* === Анімація при відкритті меню === */
-  .navbar-container input:checked ~ .hamburger-lines .line1 {
-    transform: rotate(45deg) translateY(8px);
+  .header__links-block {
+    padding: 3em 0 3em 0;
   }
 
-  .navbar-container input:checked ~ .hamburger-lines .line2 {
-    opacity: 0;
+  .header-links__list {
+    padding: 0;
   }
 
-  .navbar-container input:checked ~ .hamburger-lines .line3 {
-    transform: rotate(-45deg) translateY(-8px);
+  .header__logo {
+    width: 6em;
+    padding: 1em;
   }
 
-  /* === Показати меню, якщо чекбокс активний === */
-  .navbar-container input:checked ~ .header-links__container {
-    display: flex;
+  .header__burger{
+    
+    width: 2.5em;
+    height: 2em;
   }
+
+  .header__burger-line {
+    width: 2.5em;
+    margin: 0;
+  }
+
+  .header__burger-line.first {
+  top: 0em;
+}
+
+.header__burger-line.second {
+  top: 1em;
+}
+
+.header__burger-line.third {
+  top: 2em;
+}
+
+/* Анімація при відкритому меню */
+.header__burger.open .header__burger-line.first {
+  transform: rotate(45deg);
+  top: 0.9em;
+}
+
+.header__burger.open .header__burger-line.second {
+  opacity: 0;
+}
+
+.header__burger.open .header__burger-line.third {
+  transform: rotate(-45deg);
+  top: 0.9em;
+}
 }
