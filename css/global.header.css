@@ -24,7 +24,7 @@
   position: absolute;
   width: 3em;
   height: 0.3em;
-  background: whitesmoke;
+  background: var(--header-hero-background-color);
   border-radius: 2px;
   transition: all 0.3s ease-in-out;
   left: 0;
@@ -75,7 +75,7 @@
 }
 
 .header-nav__link {
-  color: whitesmoke !important;
+  color: var(--header-hero-background-color) !important;
   font-size: 2em;
   padding: 0.5em 1em;
   text-decoration: none !important;
@@ -134,7 +134,7 @@
     justify-content: center;
     width: 100%;
     padding: 4em;
-    color: whitesmoke;
+    color: var(--header-hero-background-color);
     text-align: center;
     height: 70vh;
     opacity: 1;
