@@ -1,5 +1,5 @@
 .top-section {
-  background-color: #ffffff;
+  background-color: var(--color-white);
   padding: 4em 0 4em;
   text-align: center;
   margin: -40px auto 0;
@@ -15,14 +15,14 @@
 
 
 .top-section__title {
-  color: #333333;
+  color: var(--text-primary);
   font-size: 2.4rem;
   margin-bottom: 15px;
   font-weight: 600;
 }
 
 .top-section__subtitle {
-  color: #666666;
+  color: var(--text-secondary);
   font-size: 1.2rem;
   margin-bottom: 50px;
   line-height: 1.6;
@@ -39,13 +39,13 @@
 }
 
 .top-section__social-link {
-  color: #333;
+  color: var(--color-neutral-10);
   font-size: 1.3rem;
   transition: all 0.3s ease;
 }
 
 .top-section__social-link:hover {
-  color: #c0a878;
+  color: var(--accent-gold);
   transform: translateY(-3px);
 }
 
@@ -66,11 +66,11 @@
 }
 
 .info-column__title {
-  color: #000000; /* Чорний колір */
+  color: var(--text-black); 
   font-size: 1.4rem;
   margin-bottom: 25px;
   padding-bottom: 10px;
-  border-bottom: 2px solid #dddddd;
+  border-bottom: 2px solid var(--border-light);
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -78,12 +78,12 @@
 }
 
 .info-column__title i {
-  color: #000000; /* Чорні іконки */
+  color: var(--text-black); 
   font-size: 1.2em;
 }
 
 .info-column__text {
-  color: #555555;
+  color: var(--text-muted);
   line-height: 1.8;
   margin: 0;
   font-size: 1.05rem;
