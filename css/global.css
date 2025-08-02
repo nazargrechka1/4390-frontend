@@ -25,24 +25,9 @@ body {
 
   --header-background-color: #151515;
   --header-hero-background-color: #f3f3f3;
-
   --color-neutral-400: #606266;
-  --color-neutral-300: #888;
-  --color-neutral-200: #999;
-  --color-neutral-100: #ececf1;
-  --color-neutral-50: #aaa;
-  --color-neutral-30: #777;
-  --color-neutral-10: #333;
 
-  --color-black-light: #0c0c0c;
-  --color-white: #ffffff;
-
-  --shadow-light: rgba(0, 0, 0, 0.05);
-
-  --text-primary: #333333;
-  --text-secondary: #666666;
-  --accent-gold: #c0a878;
-  --text-black: #000000;
-  --border-light: #dddddd;
-  --text-muted: #555555;
+  --frame-color__advantages: rgba(168, 168, 168, 0.3);
+  --description-color__advantages: #555;
+  --action-color__advantages:  #151515;
 }
