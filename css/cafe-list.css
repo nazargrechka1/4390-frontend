@@ -17,7 +17,7 @@
   font-size: 1.5em;
   margin-bottom: 2em;
   text-align: center;
-  color: var(--description-color__advantages);
+  color: #555;
 }
 
 .cafe-map-container {
@@ -30,7 +30,7 @@
 }
 
 .cafe-map-box {
-  background: var(--color-neutral-100);
+  background: #ececf1;
   border-radius: 12px;
   padding: 1.5em;
   flex: 1;
@@ -64,10 +64,10 @@
 }
 
 .cafe-list-card {
-  background:var(--color-white);
+  background: #fff;
   border-radius: 12px;
   padding: 1.2em 1.4em;
-  box-shadow: 0 2px 8px var(--shadow-light);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
 }
 
 .cafe-list-card__city {
@@ -77,12 +77,12 @@
 }
 
 .cafe-list-card__address {
-  color: var(--color-neutral-300);
+  color: #888;
   margin-bottom: 0.3rem;
 }
 
 .cafe-list-card__hours {
-  color: var(--description-color__advantages);
+  color: #555;
   font-size: 0.97em;
   margin-bottom: 0.3rem;
 }
@@ -93,7 +93,7 @@
 }
 
 .cafe-list-card__review {
-  color: var(--color-neutral-200);
+  color: #999;
   font-size: 0.95em;
 }
 
