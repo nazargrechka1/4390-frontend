@@ -1,0 +1,40 @@
+.loyalty-section{
+background-color: var(--card-background-color);
+display: flex;
+justify-content: center;
+align-items: center;
+padding: 50px 0;
+}
+
+
+.loyalty-section__block{
+background-color: rgb(13, 11, 32);
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: flex-start;
+width: 600px;
+height: 400px;
+padding: 20px;
+
+border-radius: 20px;
+}
+
+.loyalty-text{
+  text-align: center;
+  
+}
+.loyalty__title {   
+    margin-top: 0%;
+    color: #ffff;
+
+}
+.coffee-loalyty-block{
+    background-color: #ffff;
+    width: 300px;
+    height: 250px;
+    border-radius: 20px;
+}
+.loyalty__subtitle{
+    color: #000000;
+}
