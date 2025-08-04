@@ -1,18 +1,89 @@
 <link rel="stylesheet" href="css/card.css">
 <section class="loyalty-section">
-  <div class="loyalty-section__block">
-    <div class=" loyalty-gift">
-    </div>
-    
-    <div class="loyalty-text">    
-        <h2 class="loyalty__title">Special Loyalty Offer</h2>
+  <div class="loyalty-section__block loyalty-header-flex">
+    <div class="loyalty-header">
+      <span class="loyalty__title">Special Loyalty Offer</span>
+      <img class="gift" src="img/gift-svgrepo-com.svg" alt="Gift">
     </div>
     <div class="coffee-loalyty-block">
-    <div>
-        <p class="loyalty__subtitle">Coffee Loyalty Card</p> 
+      <div class="credit-card-svgrepo-block">
+        <img class="credit-card-svgrepo" src="img/credit-card-svgrepo-com.svg" alt="">
+      </div>
+      <h3 class="loyalty__subtitle">Coffee Loyalty Card</h3>
+      <div class="loyalty-circles-flex">
+        <!-- 1 колонка -->
+        <div class="loyalty-circles-col">
+          <div class="loyalty-circle collected">
+            <img src="img/coffee-cup-svgrepo-com.svg" alt="">
+          </div>
+          <div class="loyalty-circle ">
+            <img src="img/coffee-cup-svgrepo-com.svg" alt="">
+          </div>
+          <div class="loyalty-circle">
+            <img src="img/coffee-cup-svgrepo-com.svg" alt="">
+          </div>
         </div>
-  </div>
-  <div class="box"></div>
+        <!-- 2 колонка -->
+        <div class="loyalty-circles-col">
+          <div class="loyalty-circle collected">
+            <img src="img/coffee-cup-svgrepo-com.svg" alt="">
+          </div>
+          <div class="loyalty-circle">
+            <img src="img/coffee-cup-svgrepo-com.svg" alt="">
+          </div>
+          <div class="loyalty-circle">
+            <img src="img/coffee-cup-svgrepo-com.svg" alt="">
+          </div>
+        </div>
+        <!-- 3 колонка -->
+        <div class="loyalty-circles-col">
+          <div class="loyalty-circle">
+            <img src="img/coffee-cup-svgrepo-com.svg" alt="">
+          </div>
+          <div class="loyalty-circle">
+            <img src="img/coffee-cup-svgrepo-com.svg" alt="">
+          </div>
+          <div class="loyalty-circle reward">
+            <img src="img/star-circle-svgrepo-com.svg" alt="">
+          </div>
+        </div>
+      </div>
+      <div class="progress">2/8 coffees collected</div>
     </div>
-  </section>   
-    
+    <div class="loyalty-steps-section">
+      <div class="loyalty-description">
+        Take our loyalty card, buy coffee, collect points and get your <span class="highlight">9th coffee absolutely FREE!</span>
+      </div>
+      <div class="steps-row">
+      <div class="step">
+        <div class="step-icon">
+          <img src="img/credit-card-svgrepo-com.svg" alt="Get Card">
+        </div>
+        <div class="step-label">Get Card</div>
+      </div>
+      <div class="step-arrow">→</div>
+      <div class="step">
+        <div class="step-icon">
+          <img src="img/coffee-cup-svgrepo-com.svg" alt="Buy Coffee">
+        </div>
+        <div class="step-label">Buy Coffee</div>
+      </div>
+      <div class="step-arrow">→</div>
+      <div class="step">
+        <div class="step-icon">
+          <img src="img/scan-barcode-svgrepo-com.svg" alt="Collect Points">
+        </div>
+        <div class="step-label">Collect Points</div>
+      </div>
+      <div class="step-arrow">→</div>
+      <div class="step">
+        <div class="step-icon step-icon-grey">
+          <img src="img/gift-svgrepo-com.svg" alt="Free Coffee">
+        </div>
+        <div class="step-label">Free Coffee</div>
+      </div>
+    </div>
+    <button class="loyalty-main-btn">Get Your Card Today</button>
+  </div>
+</div>
+</section>
