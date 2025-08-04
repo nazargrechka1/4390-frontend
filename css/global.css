@@ -16,6 +16,7 @@ body {
 :root {
   .container {
     width: 1200px;
+    margin: auto;
   }
 
   img {
@@ -26,8 +27,5 @@ body {
   --header-background-color: #151515;
   --header-hero-background-color: #f3f3f3;
   --color-neutral-400: #606266;
-
-  --frame-color__advantages: rgba(168, 168, 168, 0.3);
-  --description-color__advantages: #555;
-  --action-color__advantages:  #151515;
+  --color-background-menu-content: #cfcdcd;
 }
