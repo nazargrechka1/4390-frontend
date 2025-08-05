@@ -50,7 +50,7 @@
   width: 7em;
   text-align: center;
   align-items: center;
-  padding: 0.75em 2em;
+  padding: 0.75em 2.25em;
   background-color: var(--header-background-color);
   border-radius: 1em;
   text-decoration: none;
@@ -130,7 +130,8 @@
   }
 
   .header-hero__text-block{
-    padding-right: 3em;
+    padding: 0;
+
   }
 
   .header-hero__title {
@@ -190,8 +191,8 @@
   }
   
   .header-hero__text-block{
-    padding-top: 1em;
     width: 100%; 
+    padding: 1em 0 2em 1em;
   }
 
   .header-hero__title {
