@@ -78,6 +78,7 @@
   font-size: 1.1em;
   font-weight: 700;
   margin: 0 1em 1em 1em;
+  margin-top: auto; 
 }
 
 @media (max-width: 900px) {
@@ -101,7 +102,7 @@
     max-width: 100%;
   }
   .product__img, .menu-item__img {
-    height: 120px;
+    height: 250px; 
     border-radius: 16px 16px 0 0;
   }
   .product__name, .menu-item__title,
@@ -109,5 +110,11 @@
   .product__price, .menu-item__price {
     margin-left: 0.7em;
     margin-right: 0.7em;
+  }
+  .product__name, .menu-item__title {
+    margin-top: 2em; 
+  }
+  .product__price, .menu-item__price {
+    margin-top: auto; 
   }
 }
