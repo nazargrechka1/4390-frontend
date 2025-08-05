@@ -3,7 +3,7 @@ const slides = [
       <div class="popular-menu__img-wrapper">
         <img
           class="popular-menu__image"
-          src="../img/popular-menu/popular-menu-espresso.png"
+          src="img/popular-menu/popular-menu-espresso.png"
         />
       </div>
 
@@ -18,7 +18,7 @@ const slides = [
       <div class="popular-menu__img-wrapper">
         <img
           class="popular-menu__image"
-          src="../img/popular-menu/popular-menu-cappuccino.png"
+          src="img/popular-menu/popular-menu-cappuccino.png"
         />
       </div>
 
@@ -35,7 +35,7 @@ const slides = [
       <div class="popular-menu__img-wrapper">
         <img
           class="popular-menu__image"
-          src="../img/popular-menu/popular-menu-sandwich.png"
+          src="img/popular-menu/popular-menu-sandwich.png"
         />
       </div>
 
@@ -52,7 +52,7 @@ const slides = [
       <div class="popular-menu__img-wrapper">
         <img
           class="popular-menu__image"
-          src="../img/popular-menu/popular-menu-burger.png"
+          src="img/popular-menu/popular-menu-burger.png"
         />
       </div>
 
