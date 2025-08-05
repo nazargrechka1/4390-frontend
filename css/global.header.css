@@ -3,6 +3,8 @@
   flex-direction: row;
   align-items: center;
   justify-content: center;
+  background-color: var(--header-background-color);
+  width: 100%;
 }
 
 .header__burger {
@@ -68,11 +70,11 @@
   justify-content: left;
 }
 
-.header {
+/* .header {
   display: flex;
   justify-content: center;
   background-color: var(--header-background-color);
-}
+} */
 
 .header-nav__link {
   color: whitesmoke !important;

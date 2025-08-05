@@ -13,17 +13,25 @@ body {
   scroll-behavior: smooth;
 }
 
-:root {
+.container {
+  width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+@media (max-width: 1200px) {
   .container {
-    width: 1200px;
+    width: 100%;
   }
+}
 
-  img {
-    display: block;
-    max-width: 100%;
-  }
-
-  --header-background-color: #151515;
+:root {
+  --header-background-color: #151515; 
   --header-hero-background-color: #f3f3f3;
   --color-neutral-400: #606266;
 
