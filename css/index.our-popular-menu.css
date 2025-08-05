@@ -1,0 +1,113 @@
+.popular-menu {
+  background: var(--header-hero-background-color);
+  padding: 6rem 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .popular-menu__intro {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    .popular-menu__title {
+      font-size: 1.5rem;
+      font-weight: bold;
+      margin-bottom: 0.25rem;
+    }
+
+    .popular-menu__description {
+      font-size: 1rem;
+      max-width: 250px;
+      text-align: center;
+      color: var(--color-neutral-400);
+      margin-bottom: 1.5rem;
+    }
+
+    @media (min-width: 640px) {
+      .popular-menu__title {
+        font-size: 32px;
+      }
+
+      .popular-menu__description {
+        font-size: 27px;
+        max-width: 400px;
+      }
+    }
+  }
+
+  .popular-menu__list {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+
+    .popular-menu__item {
+      width: 250px;
+      overflow: hidden;
+      transition: transform 2s ease;
+
+      .popular-menu__img-wrapper {
+        height: 220px;
+        overflow: hidden;
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+
+        .popular-menu__image {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
+      }
+
+      .popular-menu__content {
+        background: var(--color-background-menu-content);
+        border-bottom-left-radius: 10px;
+        border-bottom-right-radius: 10px;
+        padding: 20px 10px 20px 10px;
+        margin: auto;
+
+        .popular-menu__subtitle {
+          font-size: 1rem;
+          font-weight: bold;
+          margin: 0;
+        }
+
+        .popular-menu__description {
+          color: var(--color-neutral-400);
+          font-size: 0.8rem;
+          margin: 10px 0;
+        }
+
+        .popular-menu__price {
+          font-weight: bold;
+          margin: 0;
+        }
+      }
+    }
+  }
+
+  .popular-menu__container-link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .popular-menu__link {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 7em;
+      text-align: center;
+      padding: 1rem 2rem;
+      background-color: var(--header-background-color);
+      border-radius: 1em;
+      text-decoration: none;
+      color: whitesmoke;
+      font-size: 2em;
+      font-weight: 600;
+      margin-top: 3rem;
+    }
+  }
+}

@@ -1,0 +1,317 @@
+.loyalty-section {
+  background-color: var(--card-background-color);
+  display: flex;
+  justify-content: center;
+  align-items: flex-start; /* було center */
+  padding: 20px 0;        /* було 50px 0 */
+  position: relative;
+}
+
+.loyalty-section__block {
+  background-color: rgb(13, 11, 32);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  width: 600px;
+  height: auto;           /* було 600px */
+  padding: 20px;
+  border-radius: 20px;
+}
+
+.loyalty-gift {
+  display: flex;
+  justify-content: end;
+  width: 100%;
+  height: auto;
+  position: absolute;
+  top: 18px;
+  right: 32px;
+  z-index: 2;
+}
+
+.gift {
+  background-color: rgb(112, 112, 112);
+  width: 28px;
+  height: 28px;
+  border-radius: 30px;
+  margin-top: 0px;
+  opacity: 0.7;
+  margin-left: 12px;
+}
+
+.loyalty-text {
+  margin-top: -20px;
+  text-align: center;
+}
+
+.loyalty__title {
+  margin-top: 10px;
+  color: #ffffff;
+  font-size: 24px;
+  font-weight: 600;
+  text-align: center;
+  flex: 1;
+}
+
+/* Білий блок */
+.coffee-loalyty-block {
+  background-color: #fff;
+  width: 370px;
+  min-height: 260px;
+  margin: 0 auto 8px auto ; /* було 32px, стало 8px */
+  border-radius: 10px;
+  box-shadow: 0 2px 12px 0 rgba(0, 0, 0, 0.04);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 24px 16px 20px 16px;
+}
+
+.credit-card-svgrepo-block {
+  display: flex;
+  width: 100px;
+  height: 50px;            /* зменшено висоту */
+  justify-content: center;
+  align-items: flex-start;  /* прижати іконку до верху */
+  justify-self: center;
+  margin-top: 0;           /* прибрати зайвий відступ */
+}
+
+.credit-card-svgrepo {
+  height: 50px;            /* зменшено висоту самої іконки */
+  margin-top: 0;           /* прибрати зайвий відступ */
+}
+
+.loyalty__subtitle {
+  color: #2e2e2e;
+  text-align: center;
+  margin-top: 2px;
+  margin-bottom: 8px; /* додай або зменш це значення для меншого відступу */
+}
+
+/* Кружок з іконкою */
+.iconss {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background-color: #c2c2c2;
+  margin: 0 auto;
+}
+
+.iconss img,
+.iconss svg {
+  width: 18px;
+  height: 18px;
+  object-fit: contain;
+}
+
+/* Контейнер для центрування кружка */
+.circle-center-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: auto;
+  margin: 16px 0;
+}
+
+.loyalty-description {
+  color: #fff;
+  font-size: 14px;
+  margin-bottom: 12px; /* було 24px, стало 12px */
+  font-family: 'Inter', Arial, sans-serif;
+  font-weight: 500;
+  letter-spacing: 0.01em;
+  text-align: center;
+}
+
+.loyalty-description .highlight {
+  color: #8b8b8b; /* було #6ec1e4, стало сірим */
+  font-weight: 600;
+}
+
+.steps {
+  color: #fff;
+}
+
+.loyalty-circles-row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+  margin: 24px 0 12px 0;
+}
+
+.loyalty-circles-flex {
+  display: flex;
+  justify-content: flex-start; /* прижати до лівого краю */
+  align-items: center;
+  gap: 100px; /* відступ між колонками */
+  margin: 24px 0 12px 0;
+}
+
+.loyalty-circles-col {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.loyalty-circle {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: #c2c2c2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: background 0.2s;
+}
+
+.loyalty-circle img {
+  width: 18px;
+  height: 18px;
+  object-fit: contain;
+  filter: grayscale(1) brightness(0.7);
+}
+
+.loyalty-circle.collected {
+  background: #222;
+}
+
+.loyalty-circle.collected img {
+  /* Повністю біла іконка для темного кружка */
+  filter: invert(1) grayscale(1) brightness(2);
+}
+
+.loyalty-circle.reward {
+  background: #c2c2c2;
+}
+
+.loyalty-circle.reward img {
+  filter: none;
+}
+
+.loyalty-circles-grid {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 40px;
+  margin: 24px 0 12px 0;    
+}
+
+.loyalty-circles-grid-3x3 {
+  display: grid;
+  grid-template-columns: repeat(3, 36px);
+  grid-template-rows: repeat(3, 36px);
+  gap: 16px;
+  justify-content: center;
+  margin: 20px 0 12px 0;
+}
+
+.loyalty-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 16px;
+}
+
+.progress {
+  color: #8b8b8b;
+  font-size: 14px;
+  font-family: 'Inter', Arial, sans-serif;
+  font-weight: 500;
+  text-align: center;
+  margin-top: 8px;
+  letter-spacing: 0.01em;
+}
+
+.loyalty-steps-section {
+  margin-top: 32px;
+  text-align: center;
+}
+
+.steps-row {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 20px;           /* було 36px, стало менше */
+  margin-bottom: 14px; /* було 18px, стало менше */
+}
+
+.step {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 70px;     /* було 90px, стало менше */
+}
+
+.step-icon {
+  width: 40px;      /* було більше, стало менше */
+  height: 40px;
+  background: #fff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 8px;
+  box-shadow: 0 2px 8px 0 rgba(0,0,0,0.04);
+}
+
+.step-icon-grey {
+  background: #e0e0e0;
+}
+
+.step-icon img {
+  width: 20px;      /* було більше, стало менше */
+  height: 20px;
+}
+
+.step-title {
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: 500;
+  text-align: center;
+  margin-top: 4px;
+}
+
+.step-description {
+  color: #d1d1d1;
+  font-size: 10px;
+  text-align: center;
+  margin-top: 2px;
+}
+
+.step-label {
+  color: #fff; /* білий текст під іконками */
+  font-size: 15px;
+  font-family: 'Inter', Arial, sans-serif;
+  font-weight: 500;
+  margin-top: 2px;
+  text-align: center;
+}
+
+.loyalty-main-btn {
+  margin: 0 auto;
+  display: block;
+  margin-top: 16px;
+  padding: 10px 32px;
+  background: #fff;
+  color: #222;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  font-family: 'Inter', Arial, sans-serif;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: 0 2px 8px 0 rgba(0,0,0,0.04);
+  transition: background 0.2s;
+}
+
+.loyalty-main-btn:hover {
+  background: #f2f2f2;
+}
