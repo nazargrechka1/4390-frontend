@@ -2,8 +2,8 @@
   background-color: var(--card-background-color);
   display: flex;
   justify-content: center;
-  align-items: flex-start; /* було center */
-  padding: 20px 0;        /* було 50px 0 */
+  align-items: flex-start;
+  padding: 20px 0;        
   position: relative;
 }
 
@@ -14,7 +14,7 @@
   align-items: center;
   justify-content: flex-start;
   width: 600px;
-  height: auto;           /* було 600px */
+  height: auto;          
   padding: 20px;
   border-radius: 20px;
 }
@@ -59,7 +59,7 @@
   background-color: #fff;
   width: 370px;
   min-height: 260px;
-  margin: 0 auto 8px auto ; /* було 32px, стало 8px */
+  margin: 0 auto 8px auto ; 
   border-radius: 10px;
   box-shadow: 0 2px 12px 0 rgba(0, 0, 0, 0.04);
   display: flex;
@@ -71,26 +71,26 @@
 .credit-card-svgrepo-block {
   display: flex;
   width: 100px;
-  height: 50px;            /* зменшено висоту */
+  height: 50px;           
   justify-content: center;
-  align-items: flex-start;  /* прижати іконку до верху */
+  align-items: flex-start;  
   justify-self: center;
-  margin-top: 0;           /* прибрати зайвий відступ */
+  margin-top: 0;           
 }
 
 .credit-card-svgrepo {
-  height: 50px;            /* зменшено висоту самої іконки */
-  margin-top: 0;           /* прибрати зайвий відступ */
+  height: 50px;            
+  margin-top: 0;           
 }
 
 .loyalty__subtitle {
   color: #2e2e2e;
   text-align: center;
   margin-top: 2px;
-  margin-bottom: 8px; /* додай або зменш це значення для меншого відступу */
+  margin-bottom: 8px; 
 }
 
-/* Кружок з іконкою */
+
 .iconss {
   display: flex;
   justify-content: center;
@@ -109,7 +109,7 @@
   object-fit: contain;
 }
 
-/* Контейнер для центрування кружка */
+
 .circle-center-container {
   display: flex;
   justify-content: center;
@@ -122,7 +122,7 @@
 .loyalty-description {
   color: #fff;
   font-size: 14px;
-  margin-bottom: 12px; /* було 24px, стало 12px */
+  margin-bottom: 12px; 
   font-family: 'Inter', Arial, sans-serif;
   font-weight: 500;
   letter-spacing: 0.01em;
@@ -130,7 +130,7 @@
 }
 
 .loyalty-description .highlight {
-  color: #8b8b8b; /* було #6ec1e4, стало сірим */
+  color: #8b8b8b; 
   font-weight: 600;
 }
 
@@ -148,9 +148,9 @@
 
 .loyalty-circles-flex {
   display: flex;
-  justify-content: flex-start; /* прижати до лівого краю */
+  justify-content: flex-start; 
   align-items: center;
-  gap: 100px; /* відступ між колонками */
+  gap: 100px; 
   margin: 24px 0 12px 0;
 }
 
@@ -238,21 +238,28 @@
 
 .steps-row {
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: flex-start;
-  gap: 20px;           /* було 36px, стало менше */
-  margin-bottom: 14px; /* було 18px, стало менше */
+  gap: 20px;           
+  margin-bottom: 14px; 
+}
+
+.arrow-right{
+width: 35px;
+height: 25px;
+filter: brightness(0) invert(1);
+margin-top: 13px;
 }
 
 .step {
   display: flex;
   flex-direction: column;
   align-items: center;
-  min-width: 70px;     /* було 90px, стало менше */
+  min-width: 70px;     
 }
 
 .step-icon {
-  width: 40px;      /* було більше, стало менше */
+  width: 40px;      
   height: 40px;
   background: #fff;
   border-radius: 50%;
@@ -268,7 +275,7 @@
 }
 
 .step-icon img {
-  width: 20px;      /* було більше, стало менше */
+  width: 20px;      
   height: 20px;
 }
 
@@ -288,7 +295,7 @@
 }
 
 .step-label {
-  color: #fff; /* білий текст під іконками */
+  color: #fff; 
   font-size: 15px;
   font-family: 'Inter', Arial, sans-serif;
   font-weight: 500;
@@ -317,122 +324,74 @@
   background: #f2f2f2;
 }
 
-/* Адаптивність для планшетів (до 1024px) */
-@media (max-width: 1024px) {
-  .loyalty-section__block {
-    width: 90%;
-    padding: 16px;
-  }
-
-  .coffee-loalyty-block {
-    width: 100%;
-    margin-bottom: 16px;
-  }
-
-  .loyalty-circles-flex {
-    flex-direction: column;
-    gap: 24px;
-    align-items: center;
-  }
-
-  .loyalty-circles-grid {
-    gap: 20px;
-    flex-direction: column;
-  }
-
-  .steps-row {
+/* ================== Адаптивність ================== */
+.loyalty-circles-grid-3x3 {
+    display: grid;
+    grid-template-columns: repeat(3, 36px);
+    grid-template-rows: repeat(3, 36px);
     gap: 16px;
-    flex-wrap: wrap;
     justify-content: center;
-  }
 }
 
-/* Адаптивність для телефонів (до 768px) */
+
+@media (max-width: 992px) {
+    .loyalty-circles-grid-3x3 {
+        grid-template-columns: repeat(2, 36px);
+        grid-template-rows: auto;
+        gap: 14px;
+    }
+
+    .loyalty-section__block {
+        width: 90%;
+        padding: 16px;
+    }
+
+    .coffee-loalyty-block {
+        width: 90%;
+    }
+}
+
+
+@media (max-width: 576px) {
+    .loyalty-circles-grid-3x3 {
+        grid-template-columns: repeat(1, 36px);
+        grid-template-rows: auto;
+        gap: 12px;
+    }
+
+    .steps-row {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .loyalty-section {
+        padding: 10px 0;
+    }
+
+    .loyalty-section__block {
+        width: 100%;
+        border-radius: 12px;
+    }
+
+    .coffee-loalyty-block {
+        width: 100%;
+        min-height: auto;
+    }
+}
+
+
+
 @media (max-width: 768px) {
-  .loyalty-section {
-    padding: 16px 0;
+  .arrow-right {
+    flex-direction: column;
   }
-
-  .loyalty-section__block {
-    width: 100%;
-    border-radius: 12px;
-    padding: 16px;
+  
+  .arrow-right  {
+    transform: rotate(90deg); 
+    margin: 8px 0; 
   }
-
-  .loyalty-gift {
-    top: 12px;
-    right: 16px;
-  }
-
-  .coffee-loalyty-block {
-    width: 100%;
-    padding: 16px;
-    min-height: auto;
-    margin-bottom: 12px;
-  }
-
-  .credit-card-svgrepo-block {
-    width: 80px;
-    height: 40px;
-  }
-
-  .credit-card-svgrepo {
-    height: 40px;
-  }
-
-  .loyalty__title {
-    font-size: 20px;
-  }
-
-  .loyalty__subtitle {
-    font-size: 14px;
-  }
-
-  .loyalty-description {
-    font-size: 13px;
-    margin-bottom: 8px;
-  }
-
-  .loyalty-circle {
-    width: 32px;
-    height: 32px;
-  }
-
-  .loyalty-circles-grid-3x3 {
-    grid-template-columns: repeat(3, 32px);
-    grid-template-rows: repeat(3, 32px);
-    gap: 12px;
-  }
-
+  
   .step {
-    min-width: 60px;
-  }
-
-  .step-icon {
-    width: 36px;
-    height: 36px;
-  }
-
-  .step-icon img {
-    width: 18px;
-    height: 18px;
-  }
-
-  .step-title {
-    font-size: 14px;
-  }
-
-  .step-description {
-    font-size: 9px;
-  }
-
-  .step-label {
-    font-size: 13px;
-  }
-
-  .loyalty-main-btn {
-    width: 100%;
-    padding: 10px;
-    font-size: 15px;
+    margin: 5px 0;
   }
 }
